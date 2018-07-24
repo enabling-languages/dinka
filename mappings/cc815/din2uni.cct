@@ -1,0 +1,238 @@
+c x-sil-dinka to Unicode conversion  (cc 8.15)
+c 
+c codepoints x00 to x7F remain as is.
+c
+c codepoints x80 to xff are converted to two or three byte sequences as identified below.
+c
+c Andrew Cunningham  17/01/03
+c for DLIA [http://home.vicnet.net.au/~agamlong/dlia/]
+c
+
+begin > utf8
+
+x20 > u0020
+x21 > u0021
+x22 > u0022
+x23 > u0023
+x24 > u0024
+x25 > u0025
+x26 > u0026
+x27 > u0027
+x28 > u0028
+x29 > u0029
+x2A > u002A
+x2B > u002B
+x2C > u002C
+x2D > u002D
+x2E > u002E
+x2F > u002F
+x30 > u0030
+x31 > u0031
+x32 > u0032
+x33 > u0033
+x34 > u0034
+x35 > u0035
+x36 > u0036
+x37 > u0037
+x38 > u0038
+x39 > u0039
+x3A > u003A
+x3B > u003B
+x3C > u003C
+x3D > u003D
+x3E > u003E
+x3F > u003F
+x40 > u0040
+x41 > u0041
+x42 > u0042
+x43 > u0043
+x44 > u0044
+x45 > u0045
+x46 > u0046
+x47 > u0047
+x48 > u0048
+x49 > u0049
+x4A > u004A
+x4B > u004B
+x4C > u004C
+x4D > u004D
+x4E > u004E
+x4F > u004F
+x50 > u0050
+x51 > u0051
+x52 > u0052
+x53 > u0053
+x54 > u0054
+x55 > u0055
+x56 > u0056
+x57 > u0057
+x58 > u0058
+x59 > u0059
+x5A > u005A
+x5B > u005B
+x5C > u005C
+x5D > u005D
+x5E > u005E
+x5F > u005F
+x60 > u0060
+x61 > u0061
+x62 > u0062
+x63 > u0063
+x64 > u0064
+x65 > u0065
+x66 > u0066
+x67 > u0067
+x68 > u0068
+x69 > u0069
+x6A > u006A
+x6B > u006B
+x6C > u006C
+x6D > u006D
+x6E > u006E
+x6F > u006F
+x70 > u0070
+x71 > u0071
+x72 > u0072
+x73 > u0073
+x74 > u0074
+x75 > u0075
+x76 > u0076
+x77 > u0077
+x78 > u0078
+x79 > u0079
+x7A > u007A
+x7B > u007B
+x7C > u007C
+x7D > u007D
+x7E > u007E
+c x7F > .notdef
+c x80 > .notdef
+x81 > u00CB u0300
+x82 > u0323
+x83 > u0192
+x84 > u0302
+x85 > u2026
+x86 > u2020
+x87 > u2021
+x88 > u0302
+x89 > u01DB
+x8A > u0194
+x8B > u0300
+x8C > u0186
+x8D > u00EF u0300
+c x8E > .notdef
+x8F > u0254 u0308 u0300
+x90 > u0186 u0308 u0300
+x91 > u2018
+x92 > u2019
+x93 > u201C
+x94 > u201D
+x95 > u2022
+x96 > u2013
+x97 > u2014
+x98 > u0302
+x99 > u2122
+x9A > u0263
+x9B > u203A
+x9C > u0254
+x9D > u00E4 u0300
+c x9E > .notdef
+x9F > u0190 u0300
+xA0 > u00A0
+xA1 > u0021
+xA2 > u025B u0308 u0300
+xA3 > u00A3
+xA4 > u00A4
+xA5 > u0190 u0308 u0300
+xA6 > u0069
+xA7 > u00A7
+xA8 > u0308
+xA9 > u00A9
+xAA > u00F6 u0300
+xAB > u00AB
+xAC > u00AC
+xAD > u00AD
+xAE > u00AE
+xAF > u0304
+xB0 > u00B0
+xB1 > u01DC
+xB2 > u2082
+xB3 > u2083
+xB4 > u0301
+xB5 > u0272
+xB6 > u00B6
+xB7 > u00B7
+xB8 > u032A
+xB9 > u2081
+xBA > u2080
+xBB > u00BB
+xBC > u0302
+xBD > u0302
+xBE > u00D6 u0300
+xBF > u2019
+xC0 > u00C0
+xC1 > u00C1
+xC2 > u00C4 u0301
+xC3 > u0190 u0301
+xC4 > u00C4
+xC5 > u0186 u0308
+xC6 > u0190
+xC7 > u0190 u0308
+xC8 > u00C8
+xC9 > u00C9
+xCA > u00CB u0301
+xCB > u00CB
+xCC > u00CC
+xCD > u00CD
+xCE > u1E2E
+xCF > u00CF
+xD0 > u0186 u0308 u0301
+xD1 > u014A
+xD2 > u00D2
+xD3 > u00D3
+xD4 > u00D6 u0301
+xD5 > u0186 u0301
+xD6 > u00D6
+xD7 > u2205
+xD8 > u00D8
+xD9 > u00D9
+xDA > u00DA
+xDB > u01D7
+xDC > u00DC
+xDD > u0190 u0308 u0301
+xDE > u0186 u0300
+xDF > u0020 u031A
+xE0 > u00E0
+xE1 > u00E1
+xE2 > u00E4 u0301
+xE3 > u025B u0301
+xE4 > u00E4
+xE5 > u0254 u0308
+xE6 > u025B
+xE7 > u025B u0308
+xE8 > u00E8
+xE9 > u00E9
+xEA > u00EB u0301
+xEB > u00EB
+xEC > u00EC
+xED > u00ED
+xEE > u1E2F
+xEF > u00EF
+xF0 > u0254 u0308 u0301
+xF1 > u014B
+xF2 > u00F2
+xF3 > u00F3
+xF4 > u00F6 u0301
+xF5 > u0254 u0301
+xF6 > u00F6
+xF7 > u0259
+xF8 > u00F8
+xF9 > u00F9
+xFA > u00FA
+xFB > u01D8
+xFC > u00FC
+xFD > u025B u0308 u0301
+xFE > u0254 u0300
+xFF > u025B u0300
+
+endfile > endfile
