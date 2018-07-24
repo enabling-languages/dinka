@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<KeymanDeveloperProjectUser>
+  <templatepath>file:///C:/Program%20Files%20(x86)/Keyman/Keyman%20Developer%2010.0/xml/project/</templatepath>
+  <stringspath>file:///C:/Program%20Files%20(x86)/Keyman/Keyman%20Developer%2010.0/xml/project/</stringspath>
+  <state>&lt;state&gt;&lt;tab&gt;1&lt;/tab&gt;&lt;showhelp&gt;1&lt;/showhelp&gt;&lt;/state&gt;</state>
+  <FileStates>
+    <FileState>
+      <ID>id_d402384915f8a1cf3feb49e7fcd22bd2</ID>
+      <FullPath>G:\sil\keyboards\release\el\el_dinka\source\el_dinka.kmn</FullPath>
+      <IDEState>
+        <LayoutDisplay102Key>0</LayoutDisplay102Key>
+        <DebugDefaultFont>1</DebugDefaultFont>
+        <DebugFont>Courier New|12|   |0</DebugFont>
+        <CodeFont>Courier New|12|   |0</CodeFont>
+        <CharFont>Courier New|12|   |0</CharFont>
+      </IDEState>
+      <Debug>False</Debug>
+    </FileState>
+    <FileState>
+      <ID>id_e28d73804d0a9e9e2a4feb30a7a56ac3</ID>
+      <FullPath>G:\sil\keyboards\release\el\el_dinka\source\el_dinka.kps</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_356e5d149c1e539356d72698c1e401a6</ID>
+      <FullPath>G:\sil\keyboards\release\el\el_dinka\source\welcome.htm</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_259c92ab4ccf411deb77625e2e50b9ba</ID>
+      <FullPath>G:\sil\keyboards\release\el\el_dinka\source\..\build\el_dinka.kvk</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_3f07f801a768ed64ec8dd1ed89e41b50</ID>
+      <FullPath>G:\sil\keyboards\release\el\el_dinka\source\..\build\el_dinka.kmx</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_7e22d75c2424e9088311eb8279eaf21c</ID>
+      <FullPath>G:\sil\keyboards\release\el\el_dinka\source\dinka_keyboard.png</FullPath>
+    </FileState>
+  </FileStates>
+  <MRU>
+    <File>
+      <ID>id_MRU0</ID>
+      <Filename>el_dinka.kmn</Filename>
+      <FileType>.kmn</FileType>
+      <FullPath>G:\sil\keyboards\release\el\el_dinka\source\el_dinka.kmn</FullPath>
+    </File>
+  </MRU>
+</KeymanDeveloperProjectUser>
