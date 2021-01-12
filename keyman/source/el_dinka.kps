@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Package>
   <System>
-    <KeymanDeveloperVersion>10.0.1108.0</KeymanDeveloperVersion>
+    <KeymanDeveloperVersion>13.0.115.0</KeymanDeveloperVersion>
     <FileVersion>7.0</FileVersion>
   </System>
   <Options>
@@ -17,24 +17,12 @@
   </StartMenu>
   <Info>
     <Name URL="">Thuɔŋjäŋ</Name>
-    <Version URL="">3.0</Version>
-    <Copyright URL="">© 2015-2018 Enabling Languages</Copyright>
-    <Author URL=""></Author>
+    <Version URL=""></Version>
+    <Copyright URL="">© 2015-2021 Enabling Languages</Copyright>
+    <Author URL="">Andrew Cunningham</Author>
     <WebSite URL="https://enabling-languages.github.io/dinka">https://enabling-languages.github.io/dinka</WebSite>
   </Info>
   <Files>
-    <File>
-      <Name>..\build\el_dinka.kvk</Name>
-      <Description>File el_dinka.kvk</Description>
-      <CopyLocation>0</CopyLocation>
-      <FileType>.kvk</FileType>
-    </File>
-    <File>
-      <Name>..\build\el_dinka.kmx</Name>
-      <Description>Keyboard Dinka Basic (DLIA)</Description>
-      <CopyLocation>0</CopyLocation>
-      <FileType>.kmx</FileType>
-    </File>
     <File>
       <Name>welcome\el_dinkaU_.png</Name>
       <Description>File el_dinkaU_.png</Description>
@@ -60,12 +48,6 @@
       <FileType>.png</FileType>
     </File>
     <File>
-      <Name>..\build\el_dinka.js</Name>
-      <Description>File el_dinka.js</Description>
-      <CopyLocation>0</CopyLocation>
-      <FileType>.js</FileType>
-    </File>
-    <File>
       <Name>readme.htm</Name>
       <Description>File readme.htm</Description>
       <CopyLocation>0</CopyLocation>
@@ -77,12 +59,30 @@
       <CopyLocation>0</CopyLocation>
       <FileType>.htm</FileType>
     </File>
+    <File>
+      <Name>..\build\el_dinka.js</Name>
+      <Description>File el_dinka.js</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.js</FileType>
+    </File>
+    <File>
+      <Name>..\build\el_dinka.kvk</Name>
+      <Description>File el_dinka.kvk</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.kvk</FileType>
+    </File>
+    <File>
+      <Name>..\build\el_dinka.kmx</Name>
+      <Description>Keyboard Thuɔŋjäŋ</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.kmx</FileType>
+    </File>
   </Files>
   <Keyboards>
     <Keyboard>
       <Name>Thuɔŋjäŋ</Name>
       <ID>el_dinka</ID>
-      <Version>3.0</Version>
+      <Version>3.1</Version>
       <Languages>
         <Language ID="din-Latn">Dinka (Latin)</Language>
         <Language ID="dip-Latn">Northeastern Dinka (Latin)</Language>

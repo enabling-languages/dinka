@@ -1,5 +1,8 @@
 # Dinka Change History
 
+## 3.1 (12 JAN 2021)
+* Fix bugs in long vowel input optimisations
+
 ## 3.0 (06 JUL 2018)
 * Updated backspace logic
 * Added touch device support
