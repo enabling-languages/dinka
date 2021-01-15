@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <KeymanDeveloperProjectUser>
   <ViewState>
-    <tab>3</tab>
+    <tab>1</tab>
     <showhelp>1</showhelp>
-    <path>\\VBOXSVR\el-le\languages\dinka\keyman\el_dinka.kpj</path>
+    <path>G:\languages\dinka\keyman\el_dinka.kpj</path>
   </ViewState>
   <FileStates>
     <FileState>
       <ID>id_d402384915f8a1cf3feb49e7fcd22bd2</ID>
-      <FullPath>\\VBOXSVR\el-le\languages\dinka\keyman\source\el_dinka.kmn</FullPath>
+      <FullPath>G:\languages\dinka\keyman\source\el_dinka.kmn</FullPath>
       <IDEState>
         <LayoutDisplay102Key>0</LayoutDisplay102Key>
         <DebugDefaultFont>1</DebugDefaultFont>
@@ -20,64 +20,80 @@
     </FileState>
     <FileState>
       <ID>id_e28d73804d0a9e9e2a4feb30a7a56ac3</ID>
-      <FullPath>\\VBOXSVR\el-le\languages\dinka\keyman\source\el_dinka.kps</FullPath>
+      <FullPath>G:\languages\dinka\keyman\source\el_dinka.kps</FullPath>
+      <IDEState>
+        <CodeFont>Consolas|-9|   |0</CodeFont>
+        <CharFont>Consolas|-9|   |0</CharFont>
+      </IDEState>
     </FileState>
     <FileState>
       <ID>id_f48addbb16252c60dabd92ab52aa7356</ID>
-      <FullPath>\\VBOXSVR\el-le\languages\dinka\keyman\source\el_dinka.ico</FullPath>
+      <FullPath>G:\languages\dinka\keyman\source\el_dinka.ico</FullPath>
     </FileState>
     <FileState>
       <ID>id_92c9521f56385e2203b0edad58e0ae15</ID>
-      <FullPath>\\VBOXSVR\el-le\languages\dinka\keyman\source\welcome\el_dinkaU_.png</FullPath>
+      <FullPath>G:\languages\dinka\keyman\source\welcome\el_dinkaU_.png</FullPath>
     </FileState>
     <FileState>
       <ID>id_6d11a1bce12795107adf3564b8bfeac1</ID>
-      <FullPath>\\VBOXSVR\el-le\languages\dinka\keyman\source\welcome\el_dinkaU_RA.png</FullPath>
+      <FullPath>G:\languages\dinka\keyman\source\welcome\el_dinkaU_RA.png</FullPath>
     </FileState>
     <FileState>
       <ID>id_fd22269c7fac44c9f2ed7c0e52da8336</ID>
-      <FullPath>\\VBOXSVR\el-le\languages\dinka\keyman\source\welcome\el_dinkaU_S.png</FullPath>
+      <FullPath>G:\languages\dinka\keyman\source\welcome\el_dinkaU_S.png</FullPath>
     </FileState>
     <FileState>
       <ID>id_893194abb3e2ec28b315e1a0bd59d4b2</ID>
-      <FullPath>\\VBOXSVR\el-le\languages\dinka\keyman\source\welcome\el_dinkaU_SRA.png</FullPath>
+      <FullPath>G:\languages\dinka\keyman\source\welcome\el_dinkaU_SRA.png</FullPath>
     </FileState>
     <FileState>
       <ID>id_8da344c4cea6f467013357fe099006f5</ID>
-      <FullPath>\\VBOXSVR\el-le\languages\dinka\keyman\source\readme.htm</FullPath>
+      <FullPath>G:\languages\dinka\keyman\source\readme.htm</FullPath>
     </FileState>
     <FileState>
       <ID>id_724e5b4c63f10bc0abf7077f7c3172fc</ID>
-      <FullPath>\\VBOXSVR\el-le\languages\dinka\keyman\source\welcome\welcome.htm</FullPath>
+      <FullPath>G:\languages\dinka\keyman\source\welcome\welcome.htm</FullPath>
     </FileState>
     <FileState>
       <ID>id_d71a8ffce51301e6573e380dff8955c8</ID>
-      <FullPath>\\VBOXSVR\el-le\languages\dinka\keyman\source\..\build\el_dinka.js</FullPath>
+      <FullPath>G:\languages\dinka\keyman\source\..\build\el_dinka.js</FullPath>
     </FileState>
     <FileState>
       <ID>id_259c92ab4ccf411deb77625e2e50b9ba</ID>
-      <FullPath>\\VBOXSVR\el-le\languages\dinka\keyman\source\..\build\el_dinka.kvk</FullPath>
+      <FullPath>G:\languages\dinka\keyman\source\..\build\el_dinka.kvk</FullPath>
     </FileState>
     <FileState>
       <ID>id_3f07f801a768ed64ec8dd1ed89e41b50</ID>
-      <FullPath>\\VBOXSVR\el-le\languages\dinka\keyman\source\..\build\el_dinka.kmx</FullPath>
+      <FullPath>G:\languages\dinka\keyman\source\..\build\el_dinka.kmx</FullPath>
     </FileState>
   </FileStates>
   <MRU>
     <File>
       <ID>id_MRU0</ID>
-      <Filename>el_dinka.kps</Filename>
-      <FileType>.kps</FileType>
-      <FullPath>\\VBOXSVR\el-le\languages\dinka\keyman\source\el_dinka.kps</FullPath>
+      <Filename>el_dinka.kmn</Filename>
+      <FileType>.kmn</FileType>
+      <FullPath>G:\languages\dinka\keyman\source\el_dinka.kmn</FullPath>
     </File>
     <File>
       <ID>id_MRU1</ID>
+      <Filename>el_dinka.kps</Filename>
+      <FileType>.kps</FileType>
+      <FullPath>G:\languages\dinka\keyman\source\el_dinka.kps</FullPath>
+    </File>
+    <File>
+      <ID>id_MRU2</ID>
       <Filename>el_dinka.kmn</Filename>
       <FileType>.kmn</FileType>
       <FullPath>\\VBOXSVR\el-le\languages\dinka\keyman\source\el_dinka.kmn</FullPath>
     </File>
     <File>
-      <ID>id_MRU2</ID>
+      <ID>id_MRU3</ID>
+      <Filename>el_dinka.kps</Filename>
+      <FileType>.kps</FileType>
+      <FullPath>\\VBOXSVR\el-le\languages\dinka\keyman\source\el_dinka.kps</FullPath>
+    </File>
+    <File>
+      <ID>id_MRU4</ID>
       <Filename>el_dinka.kmn</Filename>
       <FileType>.kmn</FileType>
       <FullPath>G:\sil\keyboards\release\el\el_dinka\source\el_dinka.kmn</FullPath>

@@ -164,10 +164,10 @@ c
 c rules for breathy vowels - touch devices
 c
 
-if(nfc = "0")  platform("touch") + any(diaeresisTouch) > index(diaeresisBase,3) U+0308
-if(nfc = "1")  platform("touch") + any(diaeresisTouch) > index(diaeresisChar,3)
-if(nfc = "0")  platform("touch") + any(diaeresisLongTouch) > index(diaeresisBase,3) U+0308 index(diaeresisBase,3) U+0308
-if(nfc = "1")  platform("touch") + any(diaeresisLongTouch) > index(diaeresisChar,3) index(diaeresisChar,3)
+if(nfc = "0") platform("touch") + any(diaeresisTouch) > index(diaeresisBase,3) U+0308
+if(nfc = "1") platform("touch") + any(diaeresisTouch) > index(diaeresisChar,3)
+if(nfc = "0") platform("touch") + any(diaeresisLongTouch) > index(diaeresisBase,3) U+0308 index(diaeresisBase,3) U+0308
+if(nfc = "1") platform("touch") + any(diaeresisLongTouch) > index(diaeresisChar,3) index(diaeresisChar,3)
 platform("touch") + [T_OPEN_E_0308] > U+025B U+0308
 platform("touch") + [SHIFT T_OPEN_E_0308] > U+0190 U+0308
 platform("touch") + [T_OPEN_O_0308] > U+0254 U+0308
@@ -186,7 +186,7 @@ if(nfc = "1") any(diaeresisChar) + [K_BKSP] > nul
 if(nfc = "0") any(diaeresisBase) U+0308 any(diaeresisBase) U+0308 + [K_BKSP] > context(2) context(3)
 if(nfc = "1") any(diaeresisChar) any(diaeresisChar) + [K_BKSP] > context(2)
 any(diaeresisExtendedBase) U+0308 + [K_BKSP] > nul
-any(diaeresisExtendedBase) U+0308 any(diaeresisExtendedBase) U+0308 + [K_BKSP] > context(2) context(3)
+any(diaeresisExtendedBase) U+0308 any(diaeresisExtendedBase) U+0308 + [K_BKSP] > context(1) context(2)
 
 if(nfc = "0") any(diaeresisBase) U+0308 + [SHIFT K_BKSP] > context(2)
 if(nfc = "1") any(diaeresisChar) + [SHIFT K_BKSP] > index(diaeresisBase,2)
@@ -217,14 +217,9 @@ c
 platform("macos") + [LALT K_O] > U+25CC U+0308
 
 
-
-
-
-
-
 group(normalise)
-if(nfc = "1") > use(nfc_group)
-if(nfc = "0") > use(nfd_group)
+if(nfc = "1") > use(nfc_processing)
+if(nfc = "0") > use(nfd_processing)
 
 group(nfc_processing)
 c nfc = "1"
@@ -233,14 +228,14 @@ c
 c Long breathy vowel input shortcuts
 c
 
-U+0061 U+0061 U+0308 > U+0061 U+0308 U+0061  U+0308
-U+0041 U+0041 U+0308 > U+0041 U+0308 U+0041 U+0308
-U+0065 U+0065 U+0308 > U+0065 U+0308 U+0065 U+0308
-U+0045 U+0045 U+0308 > U+0045 U+0308 U+0045 U+0308
-U+0069 U+0069 U+0308 > U+0069 U+0308 U+0069 U+0308
-U+0049 U+0049 U+0308 > U+0049 U+0308 U+0049 U+0308
-U+006F U+006F U+0308 > U+006F U+0308 U+006F U+0308
-U+004F U+004F U+0308 > U+004F U+0308 U+004F U+0308
+U+0061 U+0061 U+0308 > U+00E4 U+00E4
+U+0041 U+0041 U+0308 > U+00C4 U+00C4
+U+0065 U+0065 U+0308 > U+00EB U+00EB
+U+0045 U+0045 U+0308 > U+00CB U+00CB
+U+0069 U+0069 U+0308 > U+00EF U+00EF
+U+0049 U+0049 U+0308 > U+00CF U+00CF
+U+006F U+006F U+0308 > U+00F6 U+00F6
+U+004F U+004F U+0308 > U+00D6 U+00D6
 U+025B U+025B U+0308 > U+025B U+0308 U+025B U+0308
 U+0190 U+0190 U+0308 > U+0190 U+0308 U+0190 U+0308
 U+0254 U+0254 U+0308 > U+0254 U+0308 U+0254 U+0308
@@ -250,36 +245,37 @@ c
 c allows diacritic to be typed at the end on diphthong
 c
 
-U+0061 U+0061 any(nonDiaeresisFinal) U+0308 > U+0061 U+0308 U+0061 U+0308 context(3)
-U+0041 U+0041 any(nonDiaeresisFinal) U+0308 > U+0041 U+0308 U+0041 U+0308 context(3)
-U+0065 U+0065 any(nonDiaeresisFinal) U+0308 > U+0065 U+0308 U+0065 U+0308 context(3)
-U+0045 U+0045 any(nonDiaeresisFinal) U+0308 > U+0045 U+0308 U+0045 U+0308 context(3)
-U+0069 U+0069 any(nonDiaeresisFinalSub) U+0308 > U+0069 U+0308 U+0069 U+0308 context(3)
-U+0049 U+0049 any(nonDiaeresisFinalSub) U+0308 > U+0049 U+0308 U+0049 U+0308 context(3)
-U+006F U+006F any(nonDiaeresisFinal) U+0308 > U+006F U+0308 U+006F U+0308 context(3)
-U+004F U+004F any(nonDiaeresisFinal) U+0308 > U+004F U+0308 U+004F U+0308 context(3)
+U+0061 U+0061 any(nonDiaeresisFinal) U+0308 > U+00E4 U+00E4 context(3)
+U+0041 U+0041 any(nonDiaeresisFinal) U+0308 > U+00C4 U+00C4 context(3)
+U+0065 U+0065 any(nonDiaeresisFinal) U+0308 > U+00EB U+00EB context(3)
+U+0045 U+0045 any(nonDiaeresisFinal) U+0308 > U+00CB U+00CB context(3)
+U+0069 U+0069 any(nonDiaeresisFinalSub) U+0308 > U+00EF U+00EF context(3)
+U+0049 U+0049 any(nonDiaeresisFinalSub) U+0308 > U+00CF U+00CF context(3)
+U+006F U+006F any(nonDiaeresisFinal) U+0308 > U+00F6 U+00F6 context(3)
+U+004F U+004F any(nonDiaeresisFinal) U+0308 > U+00D6 U+00D6 context(3)
 U+025B U+025B any(nonDiaeresisFinal) U+0308 > U+025B U+0308 U+025B U+0308 context(3)
 U+0190 U+0190 any(nonDiaeresisFinal) U+0308 > U+0190 U+0308 U+0190 U+0308 context(3)
 U+0254 U+0254 any(nonDiaeresisFinal) U+0308 > U+0254 U+0308 U+0254 U+0308 context(3)
 U+0186 U+0186 any(nonDiaeresisFinal) U+0308 > U+0186 U+0308 U+0186 U+0308 context(3)
 
-any(diaeresisBaseSub) any(nonDiaeresisFinal) U+0308 > context(1) U+0308 context(2)
-U+0069 any(nonDiaeresisFinalSub) U+0308 > context(1) U+0308 context(2)
-U+0049 any(nonDiaeresisFinalSub) U+0308 > context(1) U+0308 context(2)
+any(diaeresisBaseSub) any(nonDiaeresisFinal) U+0308 > index(diaeresisChar,1) context(2)
+U+0069 any(nonDiaeresisFinalSub) U+0308 > U+00EF context(2)
+U+0049 any(nonDiaeresisFinalSub) U+0308 > U+00CF context(2)
+
 any(diaeresisExtendedBase) any(nonDiaeresisFinal) U+0308 > context(1) U+0308 context(2)
 
 c
 c rules for breathy vowels
 c
 
-any(diaeresisBase) U+0308 > context
+any(diaeresisBase) U+0308 >  index(diaeresisChar,1)
 any(diaeresisExtendedBase) U+0308 > context
 
 c
 c uU contraints
 c
-U+0075 U+0308 > context
-U+0055 U+0308 > context
+U+0075 U+0308 > context(1)
+U+0055 U+0308 > context(1)
 
 
 group(nfd_processing)

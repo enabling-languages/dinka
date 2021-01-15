@@ -84,12 +84,12 @@
       <ID>el_dinka</ID>
       <Version>3.1</Version>
       <Languages>
-        <Language ID="din-Latn">Dinka (Latin)</Language>
-        <Language ID="dip-Latn">Northeastern Dinka (Latin)</Language>
-        <Language ID="diw-Latn">Northwestern Dinka (Latin)</Language>
-        <Language ID="dib-Latn">South Central Dinka (Latin)</Language>
-        <Language ID="dks-Latn">Southeastern Dinka (Latin)</Language>
-        <Language ID="dik-Latn">Southwestern Dinka (Latin)</Language>
+        <Language ID="din-Latn-SS">Dinka (Latin, South Sudan)</Language>
+        <Language ID="dik-Latn-SS">Southwestern Dinka (Latin, South Sudan)</Language>
+        <Language ID="dip-Latn-SS">Northeastern Dinka (Latin, South Sudan)</Language>
+        <Language ID="diw-Latn-SS">Northwestern Dinka (Latin, South Sudan)</Language>
+        <Language ID="dib-Latn-SS">South Central Dinka (Latin, South Sudan)</Language>
+        <Language ID="dks-Latn-SS">Southeastern Dinka (Latin, South Sudan)</Language>
       </Languages>
     </Keyboard>
   </Keyboards>
