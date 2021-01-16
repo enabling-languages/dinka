@@ -11,7 +11,6 @@ Keyboard layout for the Dinka Language.
 * Home:     https://enabling-languages.github.io/dinka
 * Issues:   https://github.com/enabling-languages/dinka/issues/
 
-
 ## Supported Platforms
 
 * Windows
