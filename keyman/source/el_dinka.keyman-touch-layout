@@ -33,6 +33,22 @@
                   {
                     "text": "ëë",
                     "id": "T_00EB_LONG"
+                  },
+                  {
+                    "text": "é",
+                    "id": "T_00E9"
+                  },
+                  {
+                    "text": "éé",
+                    "id": "T_00E9_LONG"
+                  },
+                  {
+                    "text": "ê",
+                    "id": "T_00EA"
+                  },
+                  {
+                    "text": "êê",
+                    "id": "T_00EA_LONG"
                   }
                 ]
               },
@@ -50,7 +66,17 @@
               },
               {
                 "id": "K_U",
-                "text": "u"
+                "text": "u",
+                "sk": [
+                  {
+                    "text": "ú",
+                    "id": "T_00FA"
+                  },
+                  {
+                    "text": "úú",
+                    "id": "T_00FA_LONG"
+                  }
+                ]
               },
               {
                 "id": "K_I",
@@ -63,6 +89,22 @@
                   {
                     "text": "ïï",
                     "id": "T_00EF_LONG"
+                  },
+                  {
+                    "text": "í",
+                    "id": "T_00ED"
+                  },
+                  {
+                    "text": "íí",
+                    "id": "T_00ED_LONG"
+                  },
+                  {
+                    "text": "î",
+                    "id": "T_00EE"
+                  },
+                  {
+                    "text": "îî",
+                    "id": "T_00EE_LONG"
                   }
                 ]
               },
@@ -77,6 +119,22 @@
                   {
                     "text": "öö",
                     "id": "T_00F6_LONG"
+                  },
+                  {
+                    "text": "ó",
+                    "id": "T_00F3"
+                  },
+                  {
+                    "text": "óó",
+                    "id": "T_00F3_LONG"
+                  },
+                  {
+                    "text": "ô",
+                    "id": "T_00F4"
+                  },
+                  {
+                    "text": "ôô",
+                    "id": "T_00F4_LONG"
                   }
                 ]
               },
@@ -101,6 +159,22 @@
                   {
                     "text": "ää",
                     "id": "T_00E4_LONG"
+                  },
+                  {
+                    "text": "á",
+                    "id": "T_00E1"
+                  },
+                  {
+                    "text": "áá",
+                    "id": "T_00E1_LONG"
+                  },
+                  {
+                    "text": "â",
+                    "id": "T_00E2"
+                  },
+                  {
+                    "text": "ââ",
+                    "id": "T_00E2_LONG"
                   }
                 ]
               },
@@ -115,6 +189,22 @@
                   {
                     "text": "ɛ̈ɛ̈",
                     "id": "T_OPEN_E_0308_LONG"
+                  },
+                  {
+                    "text": "ɛ́",
+                    "id": "T_OPEN_E_0301"
+                  },
+                  {
+                    "text": "ɛ́ɛ́",
+                    "id": "T_OPEN_E_0301_LONG"
+                  },
+                  {
+                    "text": "ɛ̂",
+                    "id": "T_OPEN_E_0302"
+                  },
+                  {
+                    "text": "ɛ̂ɛ̂",
+                    "id": "T_OPEN_E_0302_LONG"
                   },
                   {
                     "text": "s",
@@ -184,6 +274,22 @@
                   {
                     "text": "ɔ̈ɔ̈",
                     "id": "T_OPEN_O_0308_LONG"
+                  },
+                  {
+                    "text": "ɔ́",
+                    "id": "T_OPEN_O_0301"
+                  },
+                  {
+                    "text": "ɔ́ɔ́",
+                    "id": "T_OPEN_O_0301_LONG"
+                  },
+                  {
+                    "text": "ɔ̂",
+                    "id": "T_OPEN_O_0302"
+                  },
+                  {
+                    "text": "ɔ̂ɔ̂",
+                    "id": "T_OPEN_O_0302_LONG"
                   },
                   {
                     "text": "x",
@@ -319,13 +425,27 @@
                 "sk": [
                   {
                     "text": "Ë",
-                    "id": "T_00CB",
-                    "layer": "default"
+                    "id": "T_00CB"
                   },
                   {
                     "text": "ËË",
-                    "id": "T_00CB_LONG",
-                    "layer": "default"
+                    "id": "T_00CB_LONG"
+                  },
+                  {
+                    "text": "É",
+                    "id": "T_00C9"
+                  },
+                  {
+                    "text": "ÉÉ",
+                    "id": "T_00C9_LONG"
+                  },
+                  {
+                    "text": "Ê",
+                    "id": "T_00CA"
+                  },
+                  {
+                    "text": "ÊÊ",
+                    "id": "T_00CA_LONG"
                   }
                 ]
               },
@@ -343,7 +463,17 @@
               },
               {
                 "id": "K_U",
-                "text": "U"
+                "text": "U",
+                "sk": [
+                  {
+                    "text": "Ú",
+                    "id": "T_00DA"
+                  },
+                  {
+                    "text": "ÚÚ",
+                    "id": "T_new_273"
+                  }
+                ]
               },
               {
                 "id": "K_I",
@@ -351,13 +481,27 @@
                 "sk": [
                   {
                     "text": "Ï",
-                    "id": "T_00CF",
-                    "layer": "default"
+                    "id": "T_00CF"
                   },
                   {
                     "text": "ÏÏ",
-                    "id": "T_00CF_LONG",
-                    "layer": "default"
+                    "id": "T_00CF_LONG"
+                  },
+                  {
+                    "text": "Í",
+                    "id": "T_00CD"
+                  },
+                  {
+                    "text": "ÍÍ",
+                    "id": "T_00CD_LONG"
+                  },
+                  {
+                    "text": "Î",
+                    "id": "T_00CE"
+                  },
+                  {
+                    "text": "ÎÎ",
+                    "id": "T_00CE_LONG"
                   }
                 ]
               },
@@ -367,13 +511,27 @@
                 "sk": [
                   {
                     "text": "Ö",
-                    "id": "T_00D6",
-                    "layer": "default"
+                    "id": "T_00D6"
                   },
                   {
                     "text": "ÖÖ",
-                    "id": "T_00D6_LONG",
-                    "layer": "default"
+                    "id": "T_00D6_LONG"
+                  },
+                  {
+                    "text": "Ó",
+                    "id": "T_00D3"
+                  },
+                  {
+                    "text": "ÓÓ",
+                    "id": "T_00D3_LONG"
+                  },
+                  {
+                    "text": "Ô",
+                    "id": "T_00D4"
+                  },
+                  {
+                    "text": "ÔÔ",
+                    "id": "T_00D4_LONG"
                   }
                 ]
               },
@@ -393,13 +551,11 @@
                 "sk": [
                   {
                     "text": "Ä",
-                    "id": "T_00C4",
-                    "layer": "default"
+                    "id": "T_00C4"
                   },
                   {
                     "text": "ÄÄ",
-                    "id": "T_00C4_LONG",
-                    "layer": "default"
+                    "id": "T_00C4_LONG"
                   }
                 ]
               },
@@ -458,8 +614,7 @@
               {
                 "id": "T_DIAERESIS",
                 "text": "◌̈",
-                "sp": "2",
-                "layer": "default"
+                "sp": "2"
               }
             ]
           },
@@ -730,7 +885,7 @@
               {
                 "id": "K_BKQUOTE",
                 "text": "~",
-                "layer": "shift"
+                "layer": "rightalt-shift"
               }
             ]
           },
@@ -853,7 +1008,8 @@
           }
         ]
       }
-    ]
+    ],
+    "displayUnderlying": false
   },
   "phone": {
     "font": "Tahoma",

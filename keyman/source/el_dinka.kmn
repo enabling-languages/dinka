@@ -78,13 +78,13 @@ c ------------------------------------------------
 c Punctuation:
 c ------------------------------------------------
 
-store(punctuationChars) U+0060 U+007E U+0021 U+0040 U+0023 U+0024 U+0025 U+005E U+0026 U+002A U+0028 U+0029 U+002D U+005F U+003D U+002B \
+store(punctuationChars) U+0021 U+0040 U+0023 U+0024 U+0025 U+005E U+0026 U+002A U+0028 U+0029 U+002D U+005F U+003D U+002B \
                         U+005B U+007B U+005D U+007D U+005C U+007C  \
                         U+002C U+003C U+002E U+003E U+002F U+003F  \
                         U+003B U+003A \
                         U+0027 U+0022
 
-store(punctuationKeys) [K_BKQUOTE] [SHIFT K_BKQUOTE] [SHIFT K_1] [SHIFT K_2] [SHIFT K_3] [SHIFT K_4] [SHIFT K_5] [SHIFT K_6] [SHIFT K_7] [SHIFT K_8] [SHIFT K_9] [SHIFT K_0] [K_HYPHEN] [SHIFT K_HYPHEN] [K_EQUAL] [SHIFT K_EQUAL] \
+store(punctuationKeys) [SHIFT K_1] [SHIFT K_2] [SHIFT K_3] [SHIFT K_4] [SHIFT K_5] [SHIFT K_6] [SHIFT K_7] [SHIFT K_8] [SHIFT K_9] [SHIFT K_0] [K_HYPHEN] [SHIFT K_HYPHEN] [K_EQUAL] [SHIFT K_EQUAL] \
                        [K_LBRKT] [SHIFT K_LBRKT] [K_RBRKT] [SHIFT K_RBRKT] [K_BKSLASH] [SHIFT K_BKSLASH] \
                        [K_COMMA] [K_Z] [K_PERIOD] [SHIFT K_Z] [K_SLASH] [SHIFT K_SLASH] \
                        [SHIFT K_COMMA] [SHIFT K_PERIOD] \
@@ -99,16 +99,20 @@ c ------------------------------------------------
 
 store(additionalChars) U+0066 U+0046 U+0071 U+0051 U+0073 U+0053 U+0078 U+0058 U+007A U+005A \
                         U+00A9 U+20AC U+00A3 \
-                        U+2013 U+2014 U+2018 U+2019 U+201C U+201D U+2026
+                        U+2013 U+2014 U+2018 U+2019 U+201C U+201D U+2026 \
+                        U+0060 U+007E
 store(additionalKeys) [RALT K_F] [SHIFT RALT K_F] [RALT K_Q] [SHIFT RALT K_Q] [RALT K_S] [SHIFT RALT K_S] [RALT K_X] [SHIFT RALT K_X] [RALT K_Z] [SHIFT RALT K_Z] \
                         [RALT K_C] [RALT K_E] [RALT K_4] \
-                        [RALT K_HYPHEN] [SHIFT RALT K_HYPHEN] [RALT K_LBRKT] [RALT K_RBRKT] [SHIFT RALT K_LBRKT] [SHIFT RALT K_RBRKT] [RALT K_PERIOD]
+                        [RALT K_HYPHEN] [SHIFT RALT K_HYPHEN] [RALT K_COLON] [RALT K_QUOTE] [SHIFT RALT K_COLON] [SHIFT RALT K_QUOTE] [RALT K_PERIOD] \
+                        [RALT K_BKQUOTE] [SHIFT RALT K_BKQUOTE]
 store(additionalKeysMacOS) [LALT K_F] [SHIFT LALT K_F] [LALT K_Q] [SHIFT LALT K_Q] [LALT K_S] [SHIFT LALT K_S] [LALT K_X] [SHIFT LALT K_X] [LALT K_Z] [SHIFT LALT K_Z] \
                         [LALT K_C] [LALT K_E] [LALT K_4] \
-                        [LALT K_HYPHEN] [SHIFT LALT K_HYPHEN] [LALT K_LBRKT] [LALT K_RBRKT] [SHIFT LALT K_LBRKT] [SHIFT LALT K_RBRKT] [LALT K_PERIOD]
+                        [LALT K_HYPHEN] [SHIFT LALT K_HYPHEN] [LALT K_COLON] [LALT K_QUOTE] [SHIFT LALT K_COLON] [SHIFT LALT K_QUOTE] [LALT K_PERIOD] \
+                        [LALT K_BKQUOTE] [SHIFT LALT K_BKQUOTE]
 store(additionalTouch) [T_F] [SHIFT T_F] [T_Q] [SHIFT T_Q] [T_S] [SHIFT T_S] [T_X] [SHIFT T_X] [T_Z] [SHIFT T_Z] \
                         [T_COPYRIGHT] [T_EURO] [T_POUND] \
-                        [T_EN_DASH] [T_EM_DASH] [T_LSINGLE_QUOTE] [T_RSINGLE_QUOTE] [T_LDB_QUOTE] [T_RDB_QUOTE] [T_ELLIPSIS]
+                        [T_EN_DASH] [T_EM_DASH] [T_LSINGLE_QUOTE] [T_RSINGLE_QUOTE] [T_LDB_QUOTE] [T_RDB_QUOTE] [T_ELLIPSIS] \
+                        [T_BKQUOTE] [T_TILDE]
 
 c Diaeresis - U+0308
 store(diaeresisKey)  [K_COLON] [SHIFT K_COLON] [T_DIAERESIS]
@@ -125,8 +129,8 @@ store(nonDiaeresisFinalSub) U+0075 U+0055
 store(notDiaeresis) U+0062 U+0063 U+0064 U+0066 U+0067 U+0068 U+006A U+006B U+006C U+006D U+006E U+0070 U+0071 U+0072 U+0073 U+0074 U+0076 U+0077 U+0078 U+0079 U+007A U+0042 U+0043 U+0044 U+0046 U+0047 U+0048 U+004A U+004B U+004C U+004D U+004E U+0050 U+0051 U+0052 U+0053 U+0054 U+0056 U+0057 U+0058 U+0059 U+005A U+014B U+014A U+0263 U+0194
 
 c High tone:  Acute  > U+0301 ; Circumflex  > U+0302
-store(acuteKey) [K_Z] [T_ACUTE]
-store(circumflexKey) [SHIFT K_Z] [T_CIRCUMFLEX]
+store(acuteKey) [K_BKQUOTE] [T_ACUTE]
+store(circumflexKey) [SHIFT K_BKQUOTE] [T_CIRCUMFLEX]
 c a A e E i I o O u U
 store(acuteBase) U+0061 U+0041 U+0065 U+0045 U+0069 U+0049 U+006F U+004F
 store(acuteBaseSub) U+0061 U+0041 U+0065 U+0045 U+006F U+004F
@@ -146,7 +150,15 @@ store(circumflexCharSub) U+00E2 U+00C2 U+00EA U+00CA U+00F4 U+00D4
 store(circumflexTouch) [T_00E2] [T_00C2] [T_00EA] [T_00CA] [T_00EE] [T_00CE] [T_00F4] [T_00D4]
 store(circumflexLongTouch) [T_00E2_LONG] [T_00C2_LONG] [T_00EA_LONG] [T_00CA_LONG] [T_00EE_LONG] [T_00CE_LONG] [T_00F4_LONG] [T_00D4_LONG]
 
-store(altKeys) outs(additionalKeys) outs(additionalKeysMacOS) outs(additionalTouch) [T_DIAERESIS] [T_OPEN_E_0308] [SHIFT T_OPEN_E_0308] [T_OPEN_O_0308] [SHIFT T_OPEN_O_0308] outs(diaeresisTouch) outs(diaeresisLongTouch) [T_OPEN_E_0308_LONG] [SHIFT T_OPEN_E_0308_LONG] [T_OPEN_O_0308_LONG] [SHIFT T_OPEN_O_0308_LONG] [K_BKSP] [SHIFT K_BKSP] [LCTRL K_BKSP] [RCTRL K_BKSP] [T_ACUTE] [T_CIRCUMFLEX] outs(acuteTouch) outs(acuteLongTouch) outs(circumflexTouch) outs(circumflexLongTouch) [T_OPEN_E_0301] [SHIFT T_OPEN_E_0301] [T_OPEN_O_0301] [SHIFT T_OPEN_O_0301] [T_OPEN_E_0301_LONG] [SHIFT T_OPEN_E_0301_LONG] [T_OPEN_O_0301_LONG] [SHIFT T_OPEN_O_0301_LONG] [T_OPEN_E_0302] [SHIFT T_OPEN_E_0302] [T_OPEN_O_0302] [SHIFT T_OPEN_O_0302] [T_OPEN_E_0302_LONG] [SHIFT T_OPEN_E_0302_LONG] [T_OPEN_O_0302_LONG] [SHIFT T_OPEN_O_0302_LONG] [SHIFT RALT K_O] [SHIFT RALT K_P] [SHIFT LALT K_O] [SHIFT LALT K_P] [SHIFT LCTRL K_LBRKT] [SHIFT RCTRL K_LBRKT] [SHIFT LCTRL K_RBRKT] [SHIFT RCTRL K_RBRKT]
+store(altKeys) outs(additionalKeys) outs(additionalKeysMacOS) outs(additionalTouch) [T_DIAERESIS] [T_OPEN_E_0308] [SHIFT T_OPEN_E_0308] [T_OPEN_O_0308] [SHIFT T_OPEN_O_0308] outs(diaeresisTouch) outs(diaeresisLongTouch) [T_OPEN_E_0308_LONG] [SHIFT T_OPEN_E_0308_LONG] [T_OPEN_O_0308_LONG] [SHIFT T_OPEN_O_0308_LONG] [K_BKSP] [SHIFT K_BKSP] [LCTRL K_BKSP] [RCTRL K_BKSP] [T_ACUTE] [T_CIRCUMFLEX] outs(acuteTouch) outs(acuteLongTouch) outs(circumflexTouch) outs(circumflexLongTouch) [T_OPEN_E_0301] [SHIFT T_OPEN_E_0301] [T_OPEN_O_0301] [SHIFT T_OPEN_O_0301] [T_OPEN_E_0301_LONG] [SHIFT T_OPEN_E_0301_LONG] [T_OPEN_O_0301_LONG] [SHIFT T_OPEN_O_0301_LONG] [T_OPEN_E_0302] [SHIFT T_OPEN_E_0302] [T_OPEN_O_0302] [SHIFT T_OPEN_O_0302] [T_OPEN_E_0302_LONG] [SHIFT T_OPEN_E_0302_LONG] [T_OPEN_O_0302_LONG] [SHIFT T_OPEN_O_0302_LONG] [SHIFT RALT K_O] [SHIFT RALT K_P] [SHIFT LALT K_O] [SHIFT LALT K_P] [SHIFT LCTRL K_LBRKT] [SHIFT RCTRL K_LBRKT] [SHIFT LCTRL K_RBRKT] [SHIFT RCTRL K_RBRKT] [T_BKQUOTE] [T_TILDE] [LALT K_BKQUOTE] [SHIFT LALT K_BKQUOTE] [RALT K_BKQUOTE] [SHIFT RALT K_BKQUOTE] [RALT K_COLON] [SHIFT RALT K_COLON] [LALT K_COLON] [SHIFT LALT K_COLON] [RALT K_QUOTE] [SHIFT RALT K_QUOTE] [LALT K_QUOTE] [SHIFT LALT K_QUOTE]
+
+
+c ================================================
+c
+c Constraints group
+c
+c ================================================
+
 
 group(constraints) using keys
 + [LCTRL K_LBRKT] > set(nfc='0') save(nfc)
@@ -154,10 +166,23 @@ group(constraints) using keys
 + [LCTRL K_RBRKT] > set(nfc='1') save(nfc)
 + [RCTRL K_RBRKT] > set(nfc='1') save(nfc)
 
-+ [SHIFT LCTRL K_LBRKT] > set(tones='0') save(tones)
-+ [SHIFT RCTRL K_LBRKT] > set(tones='0') save(tones)
-+ [SHIFT LCTRL K_RBRKT] > set(tones='1') save(tones)
-+ [SHIFT RCTRL K_RBRKT] > set(tones='1') save(tones)
+platform("touch") + [SHIFT RCTRL K_LBRKT] > set(tones='0') save(tones) set(&layer = 'default')
+platform("touch") + [SHIFT RCTRL K_RBRKT] > set(tones='1') save(tones) set(&layer = 'defaultTones')
+
+if(&platform != "touch") + [SHIFT LCTRL K_LBRKT] > set(tones='0') save(tones)
+if(&platform != "touch") + [SHIFT RCTRL K_LBRKT] > set(tones='0') save(tones)
+if(&platform != "touch") + [SHIFT LCTRL K_RBRKT] > set(tones='1') save(tones)
+if(&platform != "touch") + [SHIFT RCTRL K_RBRKT] > set(tones='1') save(tones)
+
+if(tones='1') layer('default') + [T_SHIFT] > layer('shiftTones')
+if(tones='0') layer('default') + [T_SHIFT] > layer('shift')
+if(tones='1') layer('shift') + [T_SHIFT] > layer('defaultTones')
+if(tones='0') layer('shift') + [T_SHIFT] > layer('default')
+
+if(tones='1') layer('defaultTones') + [T_SHIFT] > layer('shiftTones')
+if(tones='0') layer('defaultTones') + [T_SHIFT] > layer('shift')
+if(tones='1') layer('shiftTones') + [T_SHIFT] > layer('defaultTones')
+if(tones='0') layer('shiftTones') + [T_SHIFT] > layer('default')
 
 any(diaeresisChar) + any(diaeresisKey)  > context
 U+0308 + any(diaeresisKey)  > context
@@ -170,22 +195,30 @@ any(notDiaeresis) + any(acuteKey) > context
 any(notDiaeresis) + any(circumflexKey) > context
 
 + any(diaeresisKey) > U+0308 use(normalise)
-if(nfc = "0") + any(acuteKey) > nul
-if(nfc = "1") + any(acuteKey) > U+0301 use(normalise)
-if(nfc = "0") + any(circumflexKey) > nul
-if(nfc = "1") + any(circumflexKey) > U+0302 use(normalise)
+if(tones = "0") + any(acuteKey) > nul
+if(tones = "1") + any(acuteKey) > U+0301 use(normalise)
+if(tones = "0") + any(circumflexKey) > nul
+if(tones = "1") + any(circumflexKey) > U+0302 use(normalise)
 + any(digitKeysPad) > use(main)
 + any(altKeys) > use(main)
 nomatch > use(main)
+
+
+c ================================================
+c
+c Main group
+c   Processes rules for:
+c     * non-diacritic alphabetic sequences
+c     * touch device-specific rules
+c     * digits and punctuation
+c     * backspace logic
+c
+c ================================================
 
 group(main) using keys
 
 + any(coreKeys) > index(coreChars,1)
 + any(digitKeysPad) > index(digitChars,1)
-
-c ------------------------------------------------
-c ADD additional rules here:
-c ------------------------------------------------
 
 if(&platform != "touch") + any(additionalKeys) > index(additionalChars,2)
 platform("macos") + any(additionalKeysMacOS) > index(additionalChars,2)
@@ -246,32 +279,32 @@ c
 c Backspace key logic for breathy and long breathy vowels
 c
 
-if(nfc = "0") any(diaeresisBase) U+0308 + [K_BKSP] > nul
-if(nfc = "1") any(diaeresisChar) + [K_BKSP] > nul
-if(nfc = "0") any(diaeresisBase) U+0308 any(diaeresisBase) U+0308 + [K_BKSP] > context(2) context(3)
-if(nfc = "1") any(diaeresisChar) any(diaeresisChar) + [K_BKSP] > context(2)
+any(diaeresisBase) U+0308 + [K_BKSP] > nul
+any(diaeresisChar) + [K_BKSP] > nul
+any(diaeresisBase) U+0308 any(diaeresisBase) U+0308 + [K_BKSP] > context(1) context(2)
+any(diaeresisChar) any(diaeresisChar) + [K_BKSP] > context(1)
 any(diaeresisExtendedBase) U+0308 + [K_BKSP] > nul
 any(diaeresisExtendedBase) U+0308 any(diaeresisExtendedBase) U+0308 + [K_BKSP] > context(1) context(2)
 
-if(nfc = "0") any(diaeresisBase) U+0308 + [SHIFT K_BKSP] > context(2)
-if(nfc = "1") any(diaeresisChar) + [SHIFT K_BKSP] > index(diaeresisBase,2)
+any(diaeresisBase) U+0308 + [SHIFT K_BKSP] > context(1)
+any(diaeresisChar) + [SHIFT K_BKSP] > index(diaeresisBase,1)
 any(diaeresisExtendedBase) U+0308 + [SHIFT K_BKSP] > context(1)
-if(nfc = "0") any(diaeresisBase) U+0308 any(diaeresisBase) U+0308 + [SHIFT K_BKSP] > context(2) context(3)
-if(nfc = "1") any(diaeresisChar) any(diaeresisChar) + [SHIFT K_BKSP] > index(diaeresisBase,2) index(diaeresisBase,3)
+any(diaeresisBase) U+0308 any(diaeresisBase) U+0308 + [SHIFT K_BKSP] > context(1) context(2)
+any(diaeresisChar) any(diaeresisChar) + [SHIFT K_BKSP] > index(diaeresisBase,1) index(diaeresisBase,2)
 any(diaeresisExtendedBase) U+0308 any(diaeresisExtendedBase) U+0308 + [SHIFT K_BKSP] > context(1) context(3)
 
-if(nfc = "0") any(diaeresisBase) U+0308 + [LCTRL K_BKSP] > nul
-if(nfc = "1") any(diaeresisChar) + [LCTRL K_BKSP] > nul
+any(diaeresisBase) U+0308 + [LCTRL K_BKSP] > nul
+any(diaeresisChar) + [LCTRL K_BKSP] > nul
 any(diaeresisExtendedBase) U+0308 + [LCTRL K_BKSP] > nul
-if(nfc = "0") any(diaeresisBase) U+0308 any(diaeresisBase) U+0308 + [LCTRL K_BKSP] > nul
-if(nfc = "1") any(diaeresisChar) any(diaeresisChar) + [LCTRL K_BKSP] > nul
+any(diaeresisBase) U+0308 any(diaeresisBase) U+0308 + [LCTRL K_BKSP] > nul
+any(diaeresisChar) any(diaeresisChar) + [LCTRL K_BKSP] > nul
 any(diaeresisExtendedBase) U+0308 any(diaeresisExtendedBase) U+0308 + [LCTRL K_BKSP] > nul
 
-if(nfc = "0") any(diaeresisBase) U+0308 + [RCTRL K_BKSP] > nul
-if(nfc = "1") any(diaeresisChar) + [RCTRL K_BKSP] > nul
+any(diaeresisBase) U+0308 + [RCTRL K_BKSP] > nul
+any(diaeresisChar) + [RCTRL K_BKSP] > nul
 any(diaeresisExtendedBase) U+0308 + [RCTRL K_BKSP] > nul
-if(nfc = "0") any(diaeresisBase) U+0308 any(diaeresisBase) U+0308 + [RCTRL K_BKSP] > nul
-if(nfc = "1") any(diaeresisChar) any(diaeresisChar) + [RCTRL K_BKSP] > nul
+any(diaeresisBase) U+0308 any(diaeresisBase) U+0308 + [RCTRL K_BKSP] > nul
+any(diaeresisChar) any(diaeresisChar) + [RCTRL K_BKSP] > nul
 any(diaeresisExtendedBase) U+0308 any(diaeresisExtendedBase) U+0308 + [RCTRL K_BKSP] > nul
 
 c
@@ -298,12 +331,27 @@ platform("macos") + [SHIFT LALT K_O] > U+25CC U+0302          c circumflex (high
 + [SHIFT RALT K_P] > U+25CC U+0308 U+0301                      c circumflex, acute
 platform("macos") + [SHIFT LALT K_P] > U+25CC U+0308 U+0301    c circumflex, acute
 
+c ================================================
+c
+c Normalise group
+c   Directs diacritic key sequence rules to NFC or NFD
+c   processing groups.
+c
+c ================================================
+
 group(normalise)
 if(nfc = "1") > use(nfc_processing)
 if(nfc = "0") > use(nfd_processing)
 
+c ================================================
+c
+c NFC processing group
+c   nfc = "1"; use Unicode Normalisation Form C
+c   (precomposed characters)
+c
+c ================================================
+
 group(nfc_processing)
-c nfc = "1"
 
 c ------------------------------------------------
 c Breathy vowels:
@@ -327,7 +375,7 @@ U+0254 U+0254 U+0308 > U+0254 U+0308 U+0254 U+0308
 U+0186 U+0186 U+0308 > U+0186 U+0308 U+0186 U+0308
 
 c
-c allows diacritic to be typed at the end on diphthong
+c allows a diacritic to be typed at the end of a diphthong
 c
 
 U+0061 U+0061 any(nonDiaeresisFinal) U+0308 > U+00E4 U+00E4 context(3)
@@ -357,7 +405,7 @@ any(diaeresisBase) U+0308 >  index(diaeresisChar,1)
 any(diaeresisExtendedBase) U+0308 > context
 
 c
-c uU contraints
+c uU constraints
 c
 U+0075 U+0308 > context(1)
 U+0055 U+0308 > context(1)
@@ -384,7 +432,7 @@ U+0254 U+0254 U+0301 > U+0254 U+0301 U+0254 U+0301
 U+0186 U+0186 U+0301 > U+0186 U+0301 U+0186 U+0301
 
 c
-c allows diacritic to be typed at the end on diphthong
+c allows a diacritic to be typed at the end of a diphthong
 c
 
 U+0061 U+0061 any(nonDiaeresisFinal) U+0301 > U+00E1 U+00E1 context(3)
@@ -415,7 +463,7 @@ any(acuteBase) U+0301 >  index(acuteChar,1)
 any(diaeresisExtendedBase) U+0301 > context
 
 c
-c uU contraints
+c uU constraints
 c
 U+0075 U+0075 U+0301 > U+00FA U+00FA
 U+0075 U+0301 > U+00FA
@@ -457,7 +505,7 @@ U+0254 U+0308 U+0254 U+0308 U+0301 > U+0254 U+0302 U+0254 U+0302
 U+0186 U+0308 U+0186 U+0308 U+0301 > U+0186 U+0302 U+0186 U+0302
 
 c
-c allows diacritic to be typed at the end on diphthong
+c allows a diacritic to be typed at the end of the diphthong
 c
 
 U+0061 U+0061 any(nonDiaeresisFinal) U+0302 > U+00E2 U+00E2 context(3)
@@ -505,15 +553,24 @@ any(diaeresisExtendedBase) U+0302 > context
 any(diaeresisExtendedBase) U+0308 U+0301 > context(1) U+0302
 
 c
-c uU contraints
+c uU constraints
 c
 U+0075 U+0075 U+0302 > U+00FA U+00FA
 U+0075 U+0302 > U+00FA
 U+0055 U+0055 U+0302 > U+00DA U+00DA
 U+0055 U+0302 > U+00DA
 
+
+c ================================================
+c
+c NFD processing group
+c   nfc = "0"; use Unicode Normalisation Form D
+c   (combining character sequences)
+c
+c ================================================
+
 group(nfd_processing)
-c nfc = "0"
+
 
 c ------------------------------------------------
 c Breathy vowels:
@@ -533,7 +590,7 @@ U+0254 U+0254 U+0308 > U+0254 U+0308 U+0254 U+0308
 U+0186 U+0186 U+0308 > U+0186 U+0308 U+0186 U+0308
 
 c
-c allows diacritic to be typed at the end on diphthong
+c Allows a diacritic to be typed at the end of a diphthong
 c
 
 U+0061 U+0061 any(nonDiaeresisFinal) U+0308 > U+0061 U+0308 U+0061 U+0308 context(3)
@@ -563,7 +620,7 @@ any(diaeresisBase) U+0308 > context
 any(diaeresisExtendedBase) U+0308 > context
 
 c
-c uU contraints
+c uU constraints
 c
 U+0075 U+0308 > context(1)
 U+0055 U+0308 > context(1)
@@ -586,7 +643,7 @@ U+0254 U+0254 U+0301 > U+0254 U+0301 U+0254 U+0301
 U+0186 U+0186 U+0301 > U+0186 U+0301 U+0186 U+0301
 
 c
-c allows diacritic to be typed at the end on diphthong
+c allows a diacritic to be typed at the end of a diphthong
 c
 
 U+0061 U+0061 any(nonDiaeresisFinal) U+0301 > U+0061 U+0301 U+0061 U+0301 context(3)
@@ -616,7 +673,7 @@ any(diaeresisBase) U+0301 > context
 any(diaeresisExtendedBase) U+0301 > context
 
 c
-c uU contraints
+c uU constraints
 c
 U+0075 U+0301 > context
 U+0055 U+0301 > context
@@ -652,7 +709,7 @@ U+0254 U+0308 U+0254 U+0308 U+0301 > U+0254 U+0302 U+0254 U+0302
 U+0186 U+0308 U+0186 U+0308 U+0301 > U+0186 U+0302 U+0186 U+0302
 
 c
-c allows diacritic to be typed at the end on diphthong
+c allows a diacritic to be typed at the end of a diphthong
 c
 
 U+0061 U+0061 any(nonDiaeresisFinal) U+0302 > U+0061 U+0302 U+0061 U+0302 context(3)
@@ -701,7 +758,7 @@ any(diaeresisExtendedBase) U+0302 > context
 any(diaeresisExtendedBase) U+0308 U+0301 > context(1) U+0302
 
 c
-c uU contraints
+c uU constraints
 c
 
 U+0075 U+0075 U+0302 > U+0075 U+0301 U+0075 U+0301
@@ -711,4 +768,4 @@ U+0055 U+0302 > U+0055 U+0301
 
 c TODO:
 c    * add NFC processing rules for high tones
-c    * add backspace logic and touch layout loging the main group for high tones
+c    * Add backspace logic and touch layout logging the main group for high tones
