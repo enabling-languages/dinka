@@ -150,7 +150,7 @@ store(circumflexCharSub) U+00E2 U+00C2 U+00EA U+00CA U+00F4 U+00D4
 store(circumflexTouch) [T_00E2] [T_00C2] [T_00EA] [T_00CA] [T_00EE] [T_00CE] [T_00F4] [T_00D4]
 store(circumflexLongTouch) [T_00E2_LONG] [T_00C2_LONG] [T_00EA_LONG] [T_00CA_LONG] [T_00EE_LONG] [T_00CE_LONG] [T_00F4_LONG] [T_00D4_LONG]
 
-store(altKeys) outs(additionalKeys) outs(additionalKeysMacOS) outs(additionalTouch) [T_DIAERESIS] [T_OPEN_E_0308] [SHIFT T_OPEN_E_0308] [T_OPEN_O_0308] [SHIFT T_OPEN_O_0308] outs(diaeresisTouch) outs(diaeresisLongTouch) [T_OPEN_E_0308_LONG] [SHIFT T_OPEN_E_0308_LONG] [T_OPEN_O_0308_LONG] [SHIFT T_OPEN_O_0308_LONG] [K_BKSP] [SHIFT K_BKSP] [LCTRL K_BKSP] [RCTRL K_BKSP] [T_ACUTE] [T_CIRCUMFLEX] outs(acuteTouch) outs(acuteLongTouch) outs(circumflexTouch) outs(circumflexLongTouch) [T_OPEN_E_0301] [SHIFT T_OPEN_E_0301] [T_OPEN_O_0301] [SHIFT T_OPEN_O_0301] [T_OPEN_E_0301_LONG] [SHIFT T_OPEN_E_0301_LONG] [T_OPEN_O_0301_LONG] [SHIFT T_OPEN_O_0301_LONG] [T_OPEN_E_0302] [SHIFT T_OPEN_E_0302] [T_OPEN_O_0302] [SHIFT T_OPEN_O_0302] [T_OPEN_E_0302_LONG] [SHIFT T_OPEN_E_0302_LONG] [T_OPEN_O_0302_LONG] [SHIFT T_OPEN_O_0302_LONG] [SHIFT RALT K_O] [SHIFT RALT K_P] [SHIFT LALT K_O] [SHIFT LALT K_P] [SHIFT LCTRL K_LBRKT] [SHIFT RCTRL K_LBRKT] [SHIFT LCTRL K_RBRKT] [SHIFT RCTRL K_RBRKT] [T_BKQUOTE] [T_TILDE] [LALT K_BKQUOTE] [SHIFT LALT K_BKQUOTE] [RALT K_BKQUOTE] [SHIFT RALT K_BKQUOTE] [RALT K_COLON] [SHIFT RALT K_COLON] [LALT K_COLON] [SHIFT LALT K_COLON] [RALT K_QUOTE] [SHIFT RALT K_QUOTE] [LALT K_QUOTE] [SHIFT LALT K_QUOTE]
+store(altKeys) outs(additionalKeys) outs(additionalKeysMacOS) outs(additionalTouch) [T_DIAERESIS] [T_OPEN_E_0308] [SHIFT T_OPEN_E_0308] [T_OPEN_O_0308] [SHIFT T_OPEN_O_0308] outs(diaeresisTouch) outs(diaeresisLongTouch) [T_OPEN_E_0308_LONG] [SHIFT T_OPEN_E_0308_LONG] [T_OPEN_O_0308_LONG] [SHIFT T_OPEN_O_0308_LONG] [K_BKSP] [SHIFT K_BKSP] [LCTRL K_BKSP] [RCTRL K_BKSP] [T_ACUTE] [T_CIRCUMFLEX] outs(acuteTouch) outs(acuteLongTouch) outs(circumflexTouch) outs(circumflexLongTouch) [T_OPEN_E_0301] [SHIFT T_OPEN_E_0301] [T_OPEN_O_0301] [SHIFT T_OPEN_O_0301] [T_OPEN_E_0301_LONG] [SHIFT T_OPEN_E_0301_LONG] [T_OPEN_O_0301_LONG] [SHIFT T_OPEN_O_0301_LONG] [T_OPEN_E_0302] [SHIFT T_OPEN_E_0302] [T_OPEN_O_0302] [SHIFT T_OPEN_O_0302] [T_OPEN_E_0302_LONG] [SHIFT T_OPEN_E_0302_LONG] [T_OPEN_O_0302_LONG] [SHIFT T_OPEN_O_0302_LONG] [SHIFT RALT K_O] [SHIFT RALT K_P] [SHIFT LALT K_O] [SHIFT LALT K_P] [SHIFT LCTRL K_LBRKT] [SHIFT RCTRL K_LBRKT] [SHIFT LCTRL K_RBRKT] [SHIFT RCTRL K_RBRKT] [T_BKQUOTE] [T_TILDE] [LALT K_BKQUOTE] [SHIFT LALT K_BKQUOTE] [RALT K_BKQUOTE] [SHIFT RALT K_BKQUOTE] [RALT K_COLON] [SHIFT RALT K_COLON] [LALT K_COLON] [SHIFT LALT K_COLON] [RALT K_QUOTE] [SHIFT RALT K_QUOTE] [LALT K_QUOTE] [SHIFT LALT K_QUOTE] [T_NFD] [T_NFC] [T_NO_TONES] [T_TONES] [T_00FA] [T_00FA_LONG] [T_00DA] [T_00DA_LONG]
 
 
 c ================================================
@@ -163,26 +163,28 @@ c ================================================
 group(constraints) using keys
 + [LCTRL K_LBRKT] > set(nfc='0') save(nfc)
 + [RCTRL K_LBRKT] > set(nfc='0') save(nfc)
++ [T_NFD] > set(nfc='0') save(nfc)
 + [LCTRL K_RBRKT] > set(nfc='1') save(nfc)
 + [RCTRL K_RBRKT] > set(nfc='1') save(nfc)
++ [T_NFC] > set(nfc='1') save(nfc)
 
-platform("touch") + [SHIFT RCTRL K_LBRKT] > set(tones='0') save(tones) set(&layer = 'default')
-platform("touch") + [SHIFT RCTRL K_RBRKT] > set(tones='1') save(tones) set(&layer = 'defaultTones')
++ [SHIFT LCTRL K_LBRKT] > set(tones='0') save(tones)
++ [SHIFT RCTRL K_LBRKT] > set(tones='0') save(tones)
++ [SHIFT LCTRL K_RBRKT] > set(tones='1') save(tones)
++ [SHIFT RCTRL K_RBRKT] > set(tones='1') save(tones)
 
-if(&platform != "touch") + [SHIFT LCTRL K_LBRKT] > set(tones='0') save(tones)
-if(&platform != "touch") + [SHIFT RCTRL K_LBRKT] > set(tones='0') save(tones)
-if(&platform != "touch") + [SHIFT LCTRL K_RBRKT] > set(tones='1') save(tones)
-if(&platform != "touch") + [SHIFT RCTRL K_RBRKT] > set(tones='1') save(tones)
+platform("touch") + [T_NO_TONES] > set(tones='0') save(tones) set(&layer = 'default')
+platform("touch") + [T_TONES] > set(tones='1') save(tones) set(&layer = 'defaultTones')
 
-if(tones='1') layer('default') + [T_SHIFT] > layer('shiftTones')
-if(tones='0') layer('default') + [T_SHIFT] > layer('shift')
-if(tones='1') layer('shift') + [T_SHIFT] > layer('defaultTones')
-if(tones='0') layer('shift') + [T_SHIFT] > layer('default')
+if(tones='1') if(&layer = 'default') + [T_SHIFT] > layer('shiftTones')
+if(tones='0') if(&layer = 'default') + [T_SHIFT] > layer('shift')
+if(tones='1') if(&layer = 'shift') + [T_SHIFT] > layer('defaultTones')
+if(tones='0') if(&layer = 'shift') + [T_SHIFT] > layer('default')
 
-if(tones='1') layer('defaultTones') + [T_SHIFT] > layer('shiftTones')
-if(tones='0') layer('defaultTones') + [T_SHIFT] > layer('shift')
-if(tones='1') layer('shiftTones') + [T_SHIFT] > layer('defaultTones')
-if(tones='0') layer('shiftTones') + [T_SHIFT] > layer('default')
+if(tones='1') if(&layer = 'defaultTones') + [T_SHIFT] > layer('shiftTones')
+if(tones='0') if(&layer = 'defaultTones') + [T_SHIFT] > layer('shift')
+if(tones='1') if(&layer = 'shiftTones') + [T_SHIFT] > layer('defaultTones')
+if(tones='0') if(&layer = 'shiftTones') + [T_SHIFT] > layer('default')
 
 any(diaeresisChar) + any(diaeresisKey)  > context
 U+0308 + any(diaeresisKey)  > context
@@ -275,6 +277,11 @@ platform("touch") + [SHIFT T_OPEN_E_0302_LONG] > U+0190 U+0302 U+0190 U+0302
 platform("touch") + [T_OPEN_O_0302_LONG] > U+0254 U+0302 U+0254 U+0302
 platform("touch") + [SHIFT T_OPEN_O_0302_LONG] > U+0186 U+0302 U+0186 U+0302
 
+
+platform("touch") + [T_00FA] > U+00FA
+platform("touch") + [T_00FA_LONG] > U+00FA U+00FA
+platform("touch") + [T_00DA] > U+00DA
+platform("touch") + [T_00DA_LONG] > U+00DA U+00DA
 c
 c Backspace key logic for breathy and long breathy vowels
 c
