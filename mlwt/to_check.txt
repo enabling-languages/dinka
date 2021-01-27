@@ -1,0 +1,7 @@
+
+
+Croscore fonts: Arimo, Tinos, Cousine
+
+Liberation fonts: Liberation Sans, Liberation Sans Narrow, Liberation Serif, Liberation Mono
+
+DejaVu: DejaVu Sans, DejaVu Serif, DejaVu Sans Mono
