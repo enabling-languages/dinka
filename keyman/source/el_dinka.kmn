@@ -29,8 +29,11 @@ begin Unicode > use(constraints)
 c ------------------------------------------------
 c Options
 c ------------------------------------------------
-store(nfc) '1'    c 1 (default) = Normalisation Form C, 0 = Normalisation Form D
-store(tones) '0'    c 1 = Use tones, 0 (default) = Do not use tones
+c store(nfc) '1'    c 1 (default) = Normalisation Form C, 0 = Normalisation Form D
+c store(tones) '0'    c 1 = Use tones, 0 (default) = Do not use tones
+
+store(nfc) 'yes'    c yes (default) = Normalisation Form C, no = Normalisation Form D
+store(tones) 'no'    c yes = Use tones, no (default) = Do not use tones
 
 c ------------------------------------------------
 c Alphabetic characters
@@ -161,30 +164,30 @@ c ================================================
 
 
 group(constraints) using keys
-+ [LCTRL K_LBRKT] > set(nfc='0') save(nfc)
-+ [RCTRL K_LBRKT] > set(nfc='0') save(nfc)
-+ [T_NFD] > set(nfc='0') save(nfc)
-+ [LCTRL K_RBRKT] > set(nfc='1') save(nfc)
-+ [RCTRL K_RBRKT] > set(nfc='1') save(nfc)
-+ [T_NFC] > set(nfc='1') save(nfc)
++ [LCTRL K_LBRKT] > set(nfc = 'no') save(nfc)
++ [RCTRL K_LBRKT] > set(nfc = 'no') save(nfc)
++ [T_NFD] > set(nfc = 'no') save(nfc)
++ [LCTRL K_RBRKT] > set(nfc = 'yes') save(nfc)
++ [RCTRL K_RBRKT] > set(nfc = 'yes') save(nfc)
++ [T_NFC] > set(nfc = 'yes') save(nfc)
 
-+ [SHIFT LCTRL K_LBRKT] > set(tones='0') save(tones)
-+ [SHIFT RCTRL K_LBRKT] > set(tones='0') save(tones)
-+ [SHIFT LCTRL K_RBRKT] > set(tones='1') save(tones)
-+ [SHIFT RCTRL K_RBRKT] > set(tones='1') save(tones)
++ [SHIFT LCTRL K_LBRKT] > set(tones = 'no') save(tones)
++ [SHIFT RCTRL K_LBRKT] > set(tones = 'no') save(tones)
++ [SHIFT LCTRL K_RBRKT] > set(tones = 'yes') save(tones)
++ [SHIFT RCTRL K_RBRKT] > set(tones = 'yes') save(tones)
 
-platform("touch") + [T_NO_TONES] > set(tones='0') save(tones) set(&layer = 'default')
-platform("touch") + [T_TONES] > set(tones='1') save(tones) set(&layer = 'defaultTones')
+platform("touch") + [T_NO_TONES] > set(tones = 'no') save(tones) set(&layer = 'default')
+platform("touch") + [T_TONES] > set(tones = 'yes') save(tones) set(&layer = 'defaultTones')
 
-if(tones='1') if(&layer = 'default') + [T_SHIFT] > layer('shiftTones')
-if(tones='0') if(&layer = 'default') + [T_SHIFT] > layer('shift')
-if(tones='1') if(&layer = 'shift') + [T_SHIFT] > layer('defaultTones')
-if(tones='0') if(&layer = 'shift') + [T_SHIFT] > layer('default')
+if(tones = 'yes') if(&layer = 'default') + [T_SHIFT] > layer('shiftTones')
+if(tones = 'no') if(&layer = 'default') + [T_SHIFT] > layer('shift')
+if(tones = 'yes') if(&layer = 'shift') + [T_SHIFT] > layer('defaultTones')
+if(tones = 'no') if(&layer = 'shift') + [T_SHIFT] > layer('default')
 
-if(tones='1') if(&layer = 'defaultTones') + [T_SHIFT] > layer('shiftTones')
-if(tones='0') if(&layer = 'defaultTones') + [T_SHIFT] > layer('shift')
-if(tones='1') if(&layer = 'shiftTones') + [T_SHIFT] > layer('defaultTones')
-if(tones='0') if(&layer = 'shiftTones') + [T_SHIFT] > layer('default')
+if(tones = 'yes') if(&layer = 'defaultTones') + [T_SHIFT] > layer('shiftTones')
+if(tones = 'no') if(&layer = 'defaultTones') + [T_SHIFT] > layer('shift')
+if(tones = 'yes') if(&layer = 'shiftTones') + [T_SHIFT] > layer('defaultTones')
+if(tones = 'no') if(&layer = 'shiftTones') + [T_SHIFT] > layer('default')
 
 any(diaeresisChar) + any(diaeresisKey)  > context
 U+0308 + any(diaeresisKey)  > context
@@ -196,11 +199,21 @@ any(notDiaeresis) + any(diaeresisKey) > context
 any(notDiaeresis) + any(acuteKey) > context
 any(notDiaeresis) + any(circumflexKey) > context
 
+
+if(nfc = 'no') if(tones = 'no') + [LALT K_SLASH] > "nfc=0; tones=0"
+if(nfc = 'yes') if(tones = 'no') + [LALT K_SLASH] > "nfc=1; tones=0"
+if(nfc = 'no') if(tones = 'yes') + [LALT K_SLASH] > "nfc=0; tones=1"
+if(nfc = 'yes') if(tones = 'yes') + [LALT K_SLASH] > "nfc=1; tones=1"
+if(nfc = 'no') if(tones = 'no') + [RALT K_SLASH] > "nfc=0; tones=0"
+if(nfc = 'yes') if(tones = 'no') + [RALT K_SLASH] > "nfc=1; tones=0"
+if(nfc = 'no') if(tones = 'yes') + [RALT K_SLASH] > "nfc=0; tones=1"
+if(nfc = 'yes') if(tones = 'yes') + [RALT K_SLASH] > "nfc=1; tones=1"
+
 + any(diaeresisKey) > U+0308 use(normalise)
-if(tones = "0") + any(acuteKey) > nul
-if(tones = "1") + any(acuteKey) > U+0301 use(normalise)
-if(tones = "0") + any(circumflexKey) > nul
-if(tones = "1") + any(circumflexKey) > U+0302 use(normalise)
+if(tones = 'no') + any(acuteKey) > nul
+if(tones = 'yes') + any(acuteKey) > U+0301 use(normalise)
+if(tones = 'no') + any(circumflexKey) > nul
+if(tones = 'yes') + any(circumflexKey) > U+0302 use(normalise)
 + any(digitKeysPad) > use(main)
 + any(altKeys) > use(main)
 nomatch > use(main)
@@ -230,10 +243,10 @@ c
 c rules for breathy vowels - touch devices
 c
 
-if(nfc = "0") platform("touch") + any(diaeresisTouch) > index(diaeresisBase,3) U+0308
-if(nfc = "1") platform("touch") + any(diaeresisTouch) > index(diaeresisChar,3)
-if(nfc = "0") platform("touch") + any(diaeresisLongTouch) > index(diaeresisBase,3) U+0308 index(diaeresisBase,3) U+0308
-if(nfc = "1") platform("touch") + any(diaeresisLongTouch) > index(diaeresisChar,3) index(diaeresisChar,3)
+if(nfc = 'no') platform("touch") + any(diaeresisTouch) > index(diaeresisBase,3) U+0308
+if(nfc = 'yes') platform("touch") + any(diaeresisTouch) > index(diaeresisChar,3)
+if(nfc = 'no') platform("touch") + any(diaeresisLongTouch) > index(diaeresisBase,3) U+0308 index(diaeresisBase,3) U+0308
+if(nfc = 'yes') platform("touch") + any(diaeresisLongTouch) > index(diaeresisChar,3) index(diaeresisChar,3)
 platform("touch") + [T_OPEN_E_0308] > U+025B U+0308
 platform("touch") + [SHIFT T_OPEN_E_0308] > U+0190 U+0308
 platform("touch") + [T_OPEN_O_0308] > U+0254 U+0308
@@ -247,10 +260,10 @@ c
 c rules for vowels with high tone - touch devices
 c
 
-if(nfc = "0") platform("touch") + any(acuteTouch) > index(acuteBase,3) U+0301
-if(nfc = "1") platform("touch") + any(acuteTouch) > index(acuteChar,3)
-if(nfc = "0") platform("touch") + any(acuteLongTouch) > index(acuteBase,3) U+0301 index(acuteBase,3) U+0301
-if(nfc = "1") platform("touch") + any(acuteLongTouch) > index(acuteChar,3) index(acuteChar,3)
+if(nfc = 'no') platform("touch") + any(acuteTouch) > index(acuteBase,3) U+0301
+if(nfc = 'yes') platform("touch") + any(acuteTouch) > index(acuteChar,3)
+if(nfc = 'no') platform("touch") + any(acuteLongTouch) > index(acuteBase,3) U+0301 index(acuteBase,3) U+0301
+if(nfc = 'yes') platform("touch") + any(acuteLongTouch) > index(acuteChar,3) index(acuteChar,3)
 platform("touch") + [T_OPEN_E_0301] > U+025B U+0301
 platform("touch") + [SHIFT T_OPEN_E_0301] > U+0190 U+0301
 platform("touch") + [T_OPEN_O_0301] > U+0254 U+0301
@@ -264,10 +277,10 @@ c
 c rules for breathy vowels with high tone - touch devices
 c
 
-if(nfc = "0") platform("touch") + any(circumflexTouch) > index(circumflexBase,3) U+0302
-if(nfc = "1") platform("touch") + any(circumflexTouch) > index(circumflexChar,3)
-if(nfc = "0") platform("touch") + any(circumflexLongTouch) > index(circumflexBase,3) U+0302 index(circumflexBase,3) U+0302
-if(nfc = "1") platform("touch") + any(circumflexLongTouch) > index(circumflexChar,3) index(circumflexChar,3)
+if(nfc = 'no') platform("touch") + any(circumflexTouch) > index(circumflexBase,3) U+0302
+if(nfc = 'yes') platform("touch") + any(circumflexTouch) > index(circumflexChar,3)
+if(nfc = 'no') platform("touch") + any(circumflexLongTouch) > index(circumflexBase,3) U+0302 index(circumflexBase,3) U+0302
+if(nfc = 'yes') platform("touch") + any(circumflexLongTouch) > index(circumflexChar,3) index(circumflexChar,3)
 platform("touch") + [T_OPEN_E_0302] > U+025B U+0302
 platform("touch") + [SHIFT T_OPEN_E_0302] > U+0190 U+0302
 platform("touch") + [T_OPEN_O_0302] > U+0254 U+0302
@@ -347,13 +360,13 @@ c
 c ================================================
 
 group(normalise)
-if(nfc = "1") > use(nfc_processing)
-if(nfc = "0") > use(nfd_processing)
+if(nfc = 'yes') > use(nfc_processing)
+if(nfc = 'no') > use(nfd_processing)
 
 c ================================================
 c
 c NFC processing group
-c   nfc = "1"; use Unicode Normalisation Form C
+c   nfc = 'yes'; use Unicode Normalisation Form C
 c   (precomposed characters)
 c
 c ================================================
@@ -571,7 +584,7 @@ U+0055 U+0302 > U+00DA
 c ================================================
 c
 c NFD processing group
-c   nfc = "0"; use Unicode Normalisation Form D
+c   nfc = 'no'; use Unicode Normalisation Form D
 c   (combining character sequences)
 c
 c ================================================
